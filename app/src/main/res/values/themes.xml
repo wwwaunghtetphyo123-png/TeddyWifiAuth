@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WifiDogAuthenticator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#F4829C</item>
+        <item name="colorPrimaryVariant">#FDDDE6</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">#F4829C</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">#FDDDE6</item>
+        <item name="android:windowBackground">#FDDDE6</item>
+        <item name="android:statusBarColor">#FDDDE6</item>
+        <item name="android:navigationBarColor">#FDDDE6</item>
+        <item name="editTextStyle">@style/EditTextStyle</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+</resources>

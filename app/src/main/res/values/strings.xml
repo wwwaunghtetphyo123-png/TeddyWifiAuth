@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Teddy WiFi Auth</string>
+    <string name="app_title">TEDDY WIFI AUTH</string>
+    <string name="app_subtitle">Created By - Aung Htet Phyo[NamtTaw]</string>
+    <string name="start">▶  START</string>
+    <string name="stop">■  STOP</string>
+    <string name="clear">CLR</string>
+    <string name="status_idle">IDLE</string>
+    <string name="status_running">Running</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="hint_ip">192.168.110.1</string>
+    <string name="hint_url">Share your secret bear codes here...\n(URL or codes)</string>
+    <string name="notification_channel_name">Auth Service</string>
+</resources>
