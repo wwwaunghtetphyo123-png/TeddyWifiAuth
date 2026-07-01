@@ -40,6 +40,12 @@ jobs:
           }
           EOF
 
+          cat > gradle.properties << 'EOF'
+          android.useAndroidX=true
+          android.enableJetifier=true
+          org.gradle.jvmargs=-Xmx2048m
+          EOF
+
           wget -q https://services.gradle.org/distributions/gradle-8.1.1-bin.zip -O gradle.zip
           unzip -q gradle.zip -d $HOME
           $HOME/gradle-8.1.1/bin/gradle wrapper --gradle-version 8.1.1
