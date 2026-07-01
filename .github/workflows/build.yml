@@ -16,17 +16,27 @@ jobs:
 
       - name: Create root Gradle files
         run: |
-          echo "include ':app'" > settings.gradle
-
-          cat > build.gradle << 'EOF'
-          buildscript {
-              repositories { google(); mavenCentral() }
-              dependencies {
-                  classpath 'com.android.tools.build:gradle:8.1.0'
+          cat > settings.gradle << 'EOF'
+          pluginManagement {
+              repositories {
+                  google()
+                  mavenCentral()
+                  gradlePluginPortal()
               }
           }
-          allprojects {
-              repositories { google(); mavenCentral() }
+          dependencyResolutionManagement {
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+          }
+          rootProject.name = "TeddyWifiAuth"
+          include ':app'
+          EOF
+
+          cat > build.gradle << 'EOF'
+          plugins {
+              id 'com.android.application' version '8.1.0' apply false
           }
           EOF
 
@@ -35,7 +45,7 @@ jobs:
           $HOME/gradle-8.1.1/bin/gradle wrapper --gradle-version 8.1.1
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug
 
       - uses: actions/upload-artifact@v4
         with:
